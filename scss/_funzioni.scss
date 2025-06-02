@@ -1,0 +1,13 @@
+@function calcolaColoreFn($base,$incremento,$perc:10%) {
+    $colore: lighten($base,$incremento * $perc);
+    @return $colore;
+}
+@function calcolaPaddingFn($parametri...) {
+    $somma: 0;
+
+    @each $valore in $parametri {
+        $somma: $somma+$valore;
+    }
+
+    @return $somma;
+}

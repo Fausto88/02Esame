@@ -1,0 +1,291 @@
+@import "_variabili";
+$template:chiaro; // chiaro | carta | scuro
+main {
+    @if $template==chiaro{
+        background-color: $bg-body-chiaro;
+    }
+    @else if $template==carta{
+        background-image: url('sfondocarta.jpg'); /* Percorso dell'immagine */
+        background-size: cover; /* L'immagine copre tutto il div */
+        background-position: center; /* L'immagine è centrata */
+        background-repeat: no-repeat; /* L'immagine non si ripete */
+    }
+    @else {
+        background-color: $bg-body-scuro;
+    }
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    margin: 0;
+    overflow: auto; /* Permette lo scroll della pagina */
+    height: 100vh; 
+    position: relative;
+    // background-color: $bg-body
+}
+
+.div3 img {
+    width: 25%;
+    z-index: -1; 
+    padding-top: 180px; 
+    padding-left: 35px;
+}
+.scritta {
+    position: absolute;
+    top: 180px; 
+    left: 53%;
+    transform: translateX(-50%); 
+    color: $c-scritta;
+    font-size: 4rem;
+    text-shadow: 2px 2px 4px $shadow-scritta; 
+    text-align: center;
+    
+}
+
+.hide {
+    visibility: hidden;
+}
+.div4 {
+    display: flex;
+    flex-direction: row;
+    padding: 80px 0 20px 0;
+    list-style: none;
+}
+
+
+#progetti {
+    padding-top: 50px;
+    text-align: center;
+    padding: 10px;
+}
+#progetti h2 {
+    visibility: hidden;
+}
+#progetti h1 {
+    padding-top: 50px;
+    color: $testoNero;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#progetti img {
+    width: 150px;
+    margin: 30px;
+    border-radius: 10px; 
+
+}
+.iconelavori,
+.iconelavori1 {
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+    display: flex; 
+    flex-direction: row;
+}
+.iconelavori a,
+.iconelavori1 a {
+    color:  $testoNero;
+    text-decoration: none;
+    list-style: none;
+    align-items: center;    
+}
+.iconelavori a:hover,
+.iconelavori1 a:hover {
+    color: $navbar-hover;
+}
+form {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    padding: 2px 0 10px 0;
+    justify-content: center;
+    height: 100%;
+    }
+    
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 2px 3px 0 0;
+}
+legend {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+label {
+    margin: 0;
+    padding: 0 5px 0 5px;
+    color: $navbar-color;
+}
+label.checkbox {
+    color: $navbar-color;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 5px 10px; 
+     margin: 3px 0 10px 0;
+    display: inline-block;
+    border: none;
+    border-bottom: 1px solid $c_footer;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 1em;
+    background-color: $bg-form;
+}
+textarea {
+    max-height: 120px;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+    border: none;
+    color: $testoNero;
+    background-color: $c-scritta;
+    border-bottom: 1px solid $bg-body-chiaro ;
+}
+
+button {
+    background-color: $c-scritta;
+    border: 1px solid $bg-form;
+    border-radius: 5px;
+    color: $navbar-bg;
+    width: 50%;
+    padding: 4px;
+    font-size: 1.2em;
+    margin-left: 50%;
+}
+button:hover {
+    background-color: $bg-form; ;
+}
+
+.errore {
+        color: $errore;
+    }
+.sx {
+    margin-top: 100px;
+    align-content: start;
+    padding-left: 20px;
+    color: $testoNero;
+    font-family: cursive;
+    font-size: 1.2rem;
+}
+.sx, .dx {
+    width: 50%;
+    padding-bottom: 50px;
+}
+@media screen and (max-width: 860px) {
+    .div3 img {
+        width: 30%;
+    }
+    .scritta {
+        font-size: 2rem;
+        top: 130px; 
+    }
+    .iconelavori,
+    .iconelavori1 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .iconelavori a,
+    .iconelavori1 a {
+        width: 50%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sx h1 {
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 550px) {
+    body {
+        flex-direction: column;
+    }
+
+    #div1 {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .logo {
+        width: 20%;
+    }
+    .button-container {
+        width: 100%;
+        flex-direction: column;
+    }
+    .scritta {
+        
+        font-size: 40px;
+    }
+    .div3 {
+        width: 100%;
+        z-index: -1;
+        flex-direction: column; 
+    }
+
+    #progetti h1 {
+        justify-content: center;
+        padding-top: 10px;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+        .iconelavori,
+        .iconelavori1 {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+    }
+    .sx h1 {
+        font-size: 0.7rem;
+        padding-bottom: 5px;
+    }
+    
+    fieldset {
+        border: none;
+        margin: 0;
+        padding: 0 3px 0 0;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    select {
+        width: 100%;
+        padding: 5px 5px;
+        margin: 10px 3px 10px 0;
+        border-bottom: 1px solid $c_footer;
+        font-size: 0.6em;
+    }
+    textarea {
+        max-height: 100px;
+ 
+    }
+    
+    button {
+        width: 50%;
+        padding: 2px;
+        font-size: 1em;
+        margin-left: 48%;
+    }
+  
+}

@@ -1,0 +1,7 @@
+@mixin impoastaDiv($r) {
+    border-radius: $r;
+    -webkit-border-radius: $r;
+    -moz-border-radius: $r;
+    -ms-border-radius: $r;
+    padding: $r;
+}

@@ -1,0 +1,5 @@
+--------------------------------------------------<strong>Nome</strong>: fausto
+    <strong>Cognome</strong>: lumare
+    <strong>E-mail</strong>: faustolumare88@gmail.com
+    <strong>Telefono</strong>: 3333333333333
+    <strong>Testo</strong>: aaaaaaaaaa--------------------------------------------------

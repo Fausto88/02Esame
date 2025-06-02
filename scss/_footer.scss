@@ -1,0 +1,56 @@
+@import "_variabili";
+footer,
+footer a {
+font-size: 1.2rem;
+// margin-top: 20px;
+background-color: $bg_footer;
+color: $c_footer;
+text-decoration: none;
+}
+footer a:hover {
+color: $navbar-hover;
+}
+footer ul {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+footer li {
+text-align: center;
+margin: 0 auto;
+}
+footer p {
+color: $c_footer;
+}
+footer section {
+padding: 20px 0 20px 0;
+}
+footer ul {
+display: flex;
+flex-direction: row;
+justify-content: center;
+
+}
+footer ul.privacy {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+  }
+  footer ul.privacy li {
+    margin: 0 10px;
+  }
+.rigaFooter {
+  padding-top: 20px;
+}
+.colonnaFooter {
+width: 50%;
+}
+@media screen and (max-width: 820px) {
+    .rigaFooter,
+    footer ul.privacy,
+    footer ul {
+            flex-direction: column;
+            padding-top: 20px;
+        }     
+}

@@ -1,0 +1,30 @@
+[
+    {
+        "title": "Photoshop",
+        "href": "lavorophotoshop.php",
+        "img": "./img/Photoshop.png",
+        "alt": "Photoshop",
+        "desc": "Progetto fatto con Photoshop"
+    },
+    {
+        "title": "Visual Studio Code",
+        "href": "lavori-css-html-visualstudio.php",
+        "img": "./img/VSCicon.png",
+        "alt": "Visual Studio Code",
+        "desc": "Progetto fatto con Visual Studio Code"
+    },
+    {
+        "title": "HTML5",
+        "href": "lavori-css-html-visualstudio.php",
+        "img": "./img/HTML5.png",
+        "alt": "HTML5",
+        "desc": "Progetto fatto con HTML"
+    },
+    {
+        "title": "CSS3",
+        "href": "lavori-css-html-visualstudio.php",
+        "img": "./img/css3.png",
+        "alt": "CSS3",
+        "desc": "Progetto fatto con CSS"
+    }
+]
