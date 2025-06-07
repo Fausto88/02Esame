@@ -51,7 +51,6 @@ stampaHeader();
         }
         ?>
     </div>
-</div>
     <br/> 
           
     <h2 class="hide">I miei lavori <br/></h2>
