@@ -16,7 +16,7 @@
         }
 
         .insieme {
-            padding-top: 180px;
+            padding-top: 120px;
             margin: 10px;
             display: flex;
         }

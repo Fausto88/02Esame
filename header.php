@@ -1,6 +1,6 @@
 <?php
-function stampaHeader() {
-    ?>
+    function stampaHeader() {
+?>
 <header>
     <nav id="div1" class="div1">
         <a href="#div1" class="aperto"> 
@@ -22,8 +22,7 @@ function stampaHeader() {
             </ul>
        
     </nav>
-    </header>
-    <?php
+</header>
+<?php
 }
 ?>
-    </body>

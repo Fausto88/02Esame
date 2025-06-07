@@ -15,11 +15,13 @@
 
         section {
             padding-top: 44px;
+            padding-left: 20px;
         }
 
         section img {
+            
             flex-wrap: wrap;
-            margin-top: 100px;
+            margin-top: 80px;
             width: 240px;
         }
 

@@ -26,30 +26,29 @@ stampaHeader();
             <h1>Ecco alcuni dei miei progetti</h1>
             <br/>
             
-<div class="iconelavori">
-    
-    <?php
-    ini_set("auto_detect_line_endings", true);
-    require_once("utility.php");
-    use MieClassi\Utility as UTI;
+        <div class="iconelavori">
+            <?php
+            ini_set("auto_detect_line_endings", true);
+            require_once("utility.php");
+            use MieClassi\Utility as UTI;
 
-    $file = "Imieilavori.json";
-    $arr = json_decode(UTI::leggiTesto($file));
-    ?>
-    
-    
-    <div class="iconelavori1">
-        <?php
-        // Mappa pagina -> link, immagine, alt, descrizione
-        $links = json_decode(UTI::leggiTesto($file), true);
+            $file = "Imieilavori.json";
+            $links = json_decode(UTI::leggiTesto($file), true);
+            $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
-
-        // Mostra tutte le icone come nel codice commentato
-        foreach ($links as $info) {
-            $id = ($info['title'] === 'CSS3') ? ' id="scrivimi"' : '';
-            echo "<a href=\"{$info['href']}\"><img src=\"{$info['img']}\" alt=\"{$info['alt']}\" title=\"{$info['alt']}\"><p$id class=\"desc\">{$info['desc']}</p></a>";
-        }
-        ?>
+            // Mostra i 4 lavori, ognuno con il proprio link (href dal JSON + id)
+            $count = 0;
+            foreach ($links as $info) {
+                if ($count >= 4) break;
+                $id_attr = ($info['title'] === 'CSS3') ? ' id="scrivimi"' : '';
+                // Attributo title descrittivo per l'accessibilità
+                $title_link = "Vai al dettaglio del progetto {$info['title']}";
+                $href = "{$info['href']}?id={$info['id']}";
+                echo "<a href=\"$href\" title=\"$title_link\"><img src=\"{$info['img']}\" alt=\"{$info['alt']}\" title=\"{$info['alt']}\"><h2>{$info['title']}</h2><p$id_attr class=\"desc\">{$info['desc']}</p></a>";
+                $count++;
+            }
+            ?>
+        </div>
     </div>
     <br/> 
           
