@@ -43,7 +43,7 @@ stampaHeader();
                 $id_attr = ($info['title'] === 'CSS3') ? ' id="scrivimi"' : '';
                 // Attributo title descrittivo per l'accessibilità
                 $title_link = "Vai al dettaglio del progetto {$info['title']}";
-                $href = "{$info['href']}?id={$info['id']}";
+                $href = "dettaglio.php?id={$info['id']}";
                 echo "<a href=\"$href\" title=\"$title_link\"><img src=\"{$info['img']}\" alt=\"{$info['alt']}\" title=\"{$info['alt']}\"><h2>{$info['title']}</h2><p$id_attr class=\"desc\">{$info['desc']}</p></a>";
                 $count++;
             }
@@ -55,11 +55,11 @@ stampaHeader();
     <h2 class="hide">I miei lavori <br/></h2>
     <hr >
     <div class="div4">
-    <section class="sx">
+    <div class="sx">
         <h1>Per avere maggiori informazioni compila il form.<br/> </h1>
         
 
-    </section>
+        </div>
     <?php
 ini_set("auto_detect_line_endings", true);
 require_once("utility.php");
@@ -135,7 +135,7 @@ else {
 if (!$inviato)
 {
 ?>
-<section class="dx">
+<div class="dx">
     <form action="index.php?inviato=1"  method="POST" novalidate>
         <fieldset>
             <legend>Contattaci</legend>
@@ -188,11 +188,11 @@ if (!$inviato)
     }
 } 
 ?>
-</section>
+</div>
 </div>
 </main>
     <footer id="contatti1">
-        <section>
+        <div>
             <ul class="rigaFooter">
                 <li class="colonnaFooter">
                  <img src="./img/logoesame1.png" alt="" width="100">
@@ -207,7 +207,7 @@ if (!$inviato)
                 <li class="colonnaFooter">
                     <p>Contattaci:</p>
                     <address>
-                    <ul>
+                    <ul class="accapo">
                         <li>
                         <a href="mailto:faustolumare33@gmail.com" title="Scrivici una e-mail">faustolumare33@gmail.com</a>
                         </li>
@@ -220,8 +220,8 @@ if (!$inviato)
         
                
             </ul>
-        </section>
-        <section>
+</div>
+        <div>
             <ul class="privacy">
                 <li>
                     <a href="#" title="Leggi la cookies policy">Cookies Policy</a>
@@ -230,7 +230,7 @@ if (!$inviato)
                     <a href="#" title="Leggi la privacy policy">Privacy Policy</a>
                 </li>
             </ul>
-        </section>
+</div>
     </footer>
     
               
