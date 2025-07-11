@@ -4,27 +4,39 @@
         "title": "Photoshop",
         "img": "./img/Photoshop.png",
         "alt": "Photoshop",
-        "desc": "Progetto fatto con Photoshop"
+        "desc": "Progetto fatto con Photoshop",
+        "lavo": [
+            "./img/ballerinadopoprima.png"
+        ]
     },
     {
         "id": 2,
         "title": "Visual Studio Code",
         "img": "./img/VSCicon.png",
         "alt": "Visual Studio Code",
-        "desc": "Progetto fatto con Visual Studio Code"
+        "desc": "Progetto fatto con Visual Studio Code",
+        "lavo": [
+            "./img/VSC-HTML-CSS.png"
+        ]
     },
     {
         "id": 3,
         "title": "HTML5",
         "img": "./img/HTML5.png",
         "alt": "HTML5",
-        "desc": "Progetto fatto con HTML"
+        "desc": "Progetto fatto con HTML",
+        "lavo": [
+            "./img/VSC-HTML-CSS.png"
+        ]
     },
     {
         "id": 4,
         "title": "CSS3",
         "img": "./img/css3.png",
         "alt": "CSS3",
-        "desc": "Progetto fatto con CSS"
+        "desc": "Progetto fatto con CSS",
+        "lavo": [
+            "./img/VSC-HTML-CSS.png"
+        ]
     }
 ]

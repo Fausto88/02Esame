@@ -1,20 +1,21 @@
 @import "_variabili";
 // scss per dettaglio
-.balla,
-.balla img,
-video,
-.bottonee4,
-h4 {
-    padding: 10px;
-    padding-left: 20px;
+main {
+    padding-top: 70px;
 }
-.balla {
-    display: flex;
-    flex-direction: row;
-    height: 42%;
-    justify-content: space-between;
-    background-color: $navbar-bg;
-    padding: 5px;
+.img-extra, h1{
+    padding-top: 30px;
+}
+p {
+    padding-top: 10px;
+}
+.balla, .balla img {
+    justify-content: center;
+    gap: 20px;
+    margin: 20px auto;
+    width: 48%;
+    height: auto;
+    display: block;
 }
 .bottonee4 {
     background-color: $c-scritta;
@@ -22,28 +23,26 @@ h4 {
     border-radius: 5px;
     color: $navbar-bg;
     text-decoration: none;
-    display: flex;
-    align-items: center;
+    width: 200px;
     justify-content: center;
-    width: 10%;
-    padding: 5px;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.2rem;
+    
 }
-@media screen and (max-width: 600px) {
-    .balla {
+@media screen and (max-width: 700px) {
+    .balla, .balla img {
         align-items: center;
-        display: flex;
-        flex-direction: column;
-        
-    }
-    .balla img {
-        width: 45%;
-        height: 100%;
-        
+        width: 85%;
+        margin: 10px auto;
     }
     .bottonee4 {
-        display: inline;
-        align-items: center;
-        justify-content: center;
+        width:50%;
+        min-width: 100px;
+        max-width: 180px;
+        margin: 15px auto 0 2px;
+        font-size: 1rem;
     }
     
 }
